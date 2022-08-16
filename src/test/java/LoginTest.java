@@ -39,7 +39,7 @@ public class LoginTest {
     }
 
     @Test
-    public void successfulLogin(){
+    public void successfulLogin() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.sharelane.com/cgi-bin/register.py");
@@ -62,7 +62,7 @@ public class LoginTest {
             e.printStackTrace();
         }
         boolean isLogin = driver.findElement(By.cssSelector("[class=user]")).isDisplayed();
-        assertTrue(isLogin,"Клиент не залогинился");
+        assertTrue(isLogin, "Клиент не залогинился");
         driver.quit();
     }
 }

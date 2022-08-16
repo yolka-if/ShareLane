@@ -34,10 +34,6 @@ public class DiscontTest {
         driver.findElement(By.cssSelector("[value=Update]")).click();
         String discountPercent = driver.findElement(By.xpath("(//table)[3]//b")).getText();
         assertEquals(discountPercent, "0", "Неверный процент скидки");
-//        String discountCost = driver.findElement(By.xpath("((//table)[3]//td)[13])")).getText();
-//        assertEquals(discountPercent, "0", "Неверная сумма скидки");
-        //((//table)[3]//td)[13])
-                // ((//table)[3]//td)[14])
         driver.quit();
 
     }
@@ -96,7 +92,7 @@ public class DiscontTest {
         driver.findElement(By.cssSelector("[value=Update]")).click();
         String discountPercent = driver.findElement(By.xpath("(//table)[3]//b")).getText();
         assertEquals(discountPercent, "3", "Неверный процент скидки");
-       // driver.quit();
+        driver.quit();
     }
 
     @Test

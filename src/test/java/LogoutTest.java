@@ -8,7 +8,7 @@ import static org.testng.Assert.assertTrue;
 
 public class LogoutTest {
     @Test
-    public void successfulLogout(){
+    public void successfulLogout() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.sharelane.com/cgi-bin/register.py");
@@ -30,8 +30,8 @@ public class LogoutTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-       driver.findElement(By.xpath("//tr[3]/td//a[text()='Logout']")).click();
-       String message = driver.findElement(By.cssSelector("[class=confirmation_message]")).getText();
+        driver.findElement(By.xpath("//tr[3]/td//a[text()='Logout']")).click();
+        String message = driver.findElement(By.cssSelector("[class=confirmation_message]")).getText();
         assertEquals(message, "You've been logged out", "Неверное сообщенеие при разлогине");
         driver.quit();
     }
